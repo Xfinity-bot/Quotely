@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: quotely-k8s-dep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quotely-k8s
+  template:
+    metadata:
+      labels:
+        app: quotely-k8s
+    spec:
+      containers:
+      - name: quotely-k8s
+        image: sriganesh101/xfinity:latest
+        ports:
+        -   containerPort: 80
+

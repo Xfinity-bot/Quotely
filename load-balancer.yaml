@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer
+  labels:
+    app: quotely-k8s
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
+    nodePort: 31000
+  selector:
+    app: quotely-k8s

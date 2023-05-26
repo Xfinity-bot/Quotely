@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    image: app:quotely
+    container_name: quotely_conatiner
+    command: npm start
+
+

@@ -3,9 +3,7 @@ import Quote from './components/Quote';
 import domtoimage from 'dom-to-image';
 import { saveAs } from 'file-saver';
 import {useState,useEffect} from 'react'
-import LottieAnimation  from './Lottie';
-import downloadJson from './assets/download.json';
-import refreshJson from './assets/refresh3.json';
+
 
 
 
@@ -33,18 +31,12 @@ function App() {
    <div className="ultimate-cont">
     <div className="main-cont"><Quote flag={flag} ></Quote>
     <div className="btn-cont">
-      <button onClick={refresh} className="btn-refresh"> < LottieAnimation 
-	    lottie={refreshJson}
-        height={45}
-        width={45}/>
+      <button onClick={refresh} className="btn-refresh"> 
         <p>REFRESH</p>
         </button>
       <button className="btn-download" onClick={downloadHandler}>
         
-        < LottieAnimation 
-	    lottie={downloadJson}
-        height={40}
-        width={40}/>
+       
         <p>DOWNLOAD</p>
     
       </button>
